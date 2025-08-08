@@ -2,25 +2,687 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
+  --primary-color: #2563eb;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: rgb(255, 255, 255);
+    --foreground: #ffffff;
   }
 }
 
+/* Restore the original body margin */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  margin: 0.25rem; /* Restore original margin */
+  padding: 0;
+}
+
+/* Keep the services-specific container override */
+.services .container {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: none;
+  margin: 0;
+}
+
+/* Also restore the hero section if needed */
+.section.about-us {
+  padding: 4rem 0 0 0;
+  margin: 0.1rem; /* This should remain as is */
+}
+
+/* About Us Section Styles */
+.about-us-wrapper {
+  overflow: hidden;
+  padding: 8rem 0.625rem 0.625rem;
+  border-radius: 0.625rem;
+  background: linear-gradient(
+    0deg,
+    rgba(236, 223, 218, 1) 0%,
+    rgba(214, 158, 139, 1) 100%
+  );
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1920px) {
+  .about-us-wrapper {
+    background-position: 50% 0%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about-us-wrapper {
+    padding-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-us-wrapper {
+    padding-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-us-wrapper {
+    padding-top: 3.75rem;
+  }
+}
+
+.container {
+  max-width: 81.875rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.938rem;
+  padding-left: 0.938rem;
+}
+
+.about-us-top-wrap {
+  max-width: 56.125rem;
+  margin-right: auto;
+  margin-bottom: 12.5rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .about-us-top-wrap {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-us-top-wrap {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-us-top-wrap {
+    margin-bottom: 1.8rem;
+  }
+  .services-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.about-us-details-wrap {
+  max-width: 42rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-us-contant-wrap {
+  padding-top: 3.75rem;
+  border-top: 0.063rem solid rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 991px) {
+  .about-us-contant-wrap {
+    padding-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-us-contant-wrap {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-us-contant-wrap {
+    padding-top: 1.5rem;
+  }
+}
+
+.about-us-image-wrap {
+  overflow: hidden;
+  border-radius: 0.625rem;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+._3d-image-wrap {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 10000px;
+}
+
+._3d-trigger-image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-animation {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+}
+
+.image.cover.is-parallax {
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animation-color-background {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+/* More About Section Styles */
+.more-about-vh-wrap {
+  width: 100%;
+  /* This is only for the desktop scroll animation */
+  height: 300vh;
+}
+
+.more-about-sticky-wrap {
+  /* This is also for the desktop animation */
+  position: sticky;
+  top: 6.25rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.more-about-contant-wrap {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+  padding-top: 12.063rem;
+  padding-bottom: 10.875rem;
+}
+
+.more-about-contant {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* --- DESKTOP IMAGE STYLES (for the animation) --- */
+.more-about-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.more-about-image-wrap {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 9rem;
+  height: 9rem;
+}
+
+.more-about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- MOBILE STYLES --- */
+@media screen and (max-width: 991px) {
+  .more-about-vh-wrap {
+    height: auto;
+  }
+
+  .more-about-sticky-wrap {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .more-about-contant-wrap {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .more-about-contant {
+    height: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Use Flexbox for a wrapping, centered grid on mobile */
+  .more-about-image-wrapper {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* Size each mobile image container */
+  .more-about-image-wrap {
+    position: relative;
+    flex: 0 1 110px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* --- Base Section Styles --- */
+.services {
+  padding: 0;
+  background-color: #faf8f5;
+  box-sizing: content-box;
+}
+
+/* --- Desktop Grid Layout --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  max-width: none;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: content-box;
+}
+
+/* --- Right Column: Image --- */
+.services-image {
+  height: 100%;
+  overflow: hidden;
+  box-sizing: content-box;
+  border-radius: 0; /* Remove any border-radius */
+  margin: 0; /* Remove any margin */
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-sizing: content-box;
+  border-radius: 0; /* Remove any border-radius */
+  margin: 0; /* Remove any margin */
+}
+
+/* --- Left Column: Text Content --- */
+.services-content {
+  padding: 4rem 3rem; /* Add padding only to text content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-content .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.services-content .section-title-color {
+  color: #e8793e;
+}
+
+.services-content .section-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.services-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.feature-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.feature-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.feature-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+/* --- Right Column: Image --- */
+.services-image {
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Mobile Styles --- */
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 2rem 0.5rem; /* Reduced from 4rem 1rem */
+  }
+
+  .services-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem; /* Reduced from 2.5rem */
+  }
+
+  .services-content {
+    order: 2;
+    padding: 1.5rem 1rem; /* Reduced from 3rem 2rem */
+  }
+
+  .services-image {
+    order: 1;
+    height: auto;
+  }
+
+  .services-content .section-title {
+    font-size: 1 rem;
+  }
+}
+
+/* Override container padding for services section */
+.services .container {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: none;
+}
+
+/* Or alternatively, remove the container class from Services component */
+
+/* Packages Section Styles */
+.packages-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+/* Header Styles */
+.packages-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.packages-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.title-highlight {
+  color: #e8793e;
+}
+
+.packages-caption {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Grid Layout */
+.packages-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-2px);
+}
+
+.package-content {
+  flex: 1;
+}
+
+.package-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8b7355;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.package-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.package-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.package-button {
+  background-color: #8b7355;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.package-button:hover {
+  background-color: #6b5a47;
+}
+
+.package-card {
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.package-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: 2px dotted #d2b48c;
+  border-radius: 50%;
+  padding: 0.2rem;
+  order: -1;
+}
+
+.icon-image {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-image {
+  border-radius: 50%;
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+  .packages-title {
+    font-size: 3rem;
+  }
+
+  .packages-caption {
+    font-size: 1.2rem;
+  }
+
+  .packages-grid {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .package-card {
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    min-height: 450px;
+    padding: 2.5rem 2rem;
+  }
+
+  .package-icon {
+    margin-bottom: 1.5rem;
+    align-self: center;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .packages-section {
+    padding: 3rem 1rem;
+  }
+
+  .packages-header {
+    margin-bottom: 3rem;
+  }
+
+  .packages-title {
+    font-size: 2rem;
+  }
+
+  .packages-caption {
+    font-size: 1rem;
+  }
+
+  .package-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: left;
+    gap: 1rem;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .package-content {
+    width: 100%;
+    padding-right: 100px;
+  }
+
+  .package-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: 2px dotted #d2b48c;
+    border-radius: 50%;
+    padding: 0.2rem;
+  }
+
+  .icon-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .package-title {
+    font-size: 1.1rem;
+  }
+
+  .package-description {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
 }
