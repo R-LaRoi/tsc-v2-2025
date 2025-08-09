@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TSC v2 2025 - Trupti Samuel Consultancy
+
+A modern, responsive website for Trupti Samuel Consultancy, providing evidence-based parenting support and professional development services for families and educators.
+
+## About
+
+Trupti Samuel Consultancy specializes in evidence-based parenting guidance for families with children from birth to age fourteen. We empower parents and educators with the knowledge and tools needed to foster healthy family environments and support child development.
+
+## Features
+
+- **Responsive Design**: Built with Next.js 15 and Tailwind CSS for optimal viewing across all devices
+- **Interactive Animations**: Smooth GSAP animations and scroll-triggered effects
+- **Modern UI/UX**: Clean, professional design with CSS modules
+- **Video Integration**: Hero section with embedded video content
+- **Service Packages**: Three comprehensive support packages for different needs
+
+## Service Packages
+
+### Connection Package
+
+**Parenting Consultation**
+
+- Focus on parent-child relationships
+- Family systems theory approach
+- Enhanced parenting skills for behavior management
+
+### Calm Package
+
+**Baby Massage (BM)**
+
+- Dedicated parent-infant bonding sessions
+- Attachment theory-based approach
+- Support for early development and sleep patterns
+
+### Curious Package
+
+**Professional Development for Educators**
+
+- Tailored workshops for early childhood centers
+- Trauma-informed practices
+- Emotional and social development enhancement
+
+## Tech Stack
+
+- **Framework**: Next.js 15.4.6 with Turbopack
+- **Frontend**: React 19.1.0
+- **Styling**: Tailwind CSS 4.0 + CSS Modules
+- **Animations**: GSAP 3.13.0 with ScrollTrigger
+- **Language**: TypeScript 5
+- **Linting**: ESLint with Next.js configuration
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd tsc-v2-2025
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── Navigation.tsx
+│   │   ├── Hero.tsx
+│   │   ├── MoreAbout.tsx
+│   │   ├── Services.tsx
+│   │   └── Packages.tsx
+│   ├── styles/
+│   │   ├── Hero.module.css
+│   │   ├── Services.module.css
+│   │   ├── MoreAbout.module.css
+│   │   └── Packages.module.css
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+public/
+├── assets/
+│   ├── tscvidai.mp4
+│   ├── icon-1.png
+│   ├── icon-2.png
+│   ├── icon-3.png
+│   └── [images...]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Navigation**: Responsive navigation with mobile hamburger menu
+- **Hero**: Video background with animated text overlays
+- **MoreAbout**: Interactive image gallery with GSAP animations
+- **Services**: Evidence-based parenting information with features
+- **Packages**: Service package cards with icons and descriptions
 
-## Deploy on Vercel
+## Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **ESLint**: Configured with Next.js and TypeScript rules
+- **Tailwind CSS**: Custom configuration with PostCSS
+- **Next.js**: Optimized for production with image optimization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Responsive Design
+
+The website is fully responsive with:
+
+- Mobile-first approach
+- Tablet and desktop optimizations
+- Touch-friendly navigation
+- Optimized images and videos
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run linting and tests
+5. Submit a pull request
+
+## License
+
+This project is private and proprietary to Trupti Samuel Consultancy.
+
+---
+
+**Contact**: For more information about our services, visit our website or contact Trupti Samuel Consultancy directly.
