@@ -1,5 +1,5 @@
 'use client';
-
+import styles from '../styles/Packages.module.css';
 import Image from 'next/image';
 
 export default function Packages() {
@@ -25,35 +25,36 @@ export default function Packages() {
   ];
 
   return (
-    <section className="packages-section">
-      <div className="container">
+    <section className={styles.packagesSection}>
+      <div className={styles.container}>
         {/* Header Section */}
-        <div className="packages-header">
-          <h2 className="packages-title">
-            Explore Our <span className="title-highlight">Professional Development</span> & Family Support Packages
+        <div className={styles.packagesHeader}>
+          <h2 className={styles.packagesTitle}>
+            Explore Our <span className={styles.titleHighlight}>Professional Development</span> & Family Support Packages
           </h2>
-          <p className="packages-caption">
+          <p className={styles.packagesCaption}>
             Navigating the journey of parenthood and education requires specialized support. Our packages are thoughtfully developed to provide parents and educators with the tools to build stronger connections, manage complex behaviors, and foster a nurturing environment for children.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="packages-grid">
+        <div className={styles.packagesGrid}>
           {packages.map((pkg, index) => (
-            <div key={index} className="package-card">
-              <div className="package-icon">
+            <div key={index} className={styles.packageCard}>
+              <div className={styles.packageIcon}>
                 <Image
                   src={pkg.icon}
                   alt={`${pkg.title} icon`}
-                  width={80}
-                  height={80}
-                  className="icon-image"
+                  width={40}
+                  height={40}
+                  className={styles.iconImage}
+                  priority={index < 3}
                 />
               </div>
-              <div className="package-content">
-                <h3 className="package-title">{pkg.title}</h3>
-                <h4 className="package-subtitle">{pkg.subtitle}</h4>
-                <p className="package-description">{pkg.description}</p>
+              <div className={styles.packageContent}>
+                <h3 className={styles.packageTitle}>{pkg.title}</h3>
+                <h4 className={styles.packageSubtitle}>{pkg.subtitle}</h4>
+                <p className={styles.packageDescription}>{pkg.description}</p>
               </div>
             </div>
           ))}

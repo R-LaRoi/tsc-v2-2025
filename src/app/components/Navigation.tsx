@@ -6,14 +6,14 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-white fixed top-0 left-0 right-0 z-50 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
 
-              <span className="text-xl font-semibold text-gray-900">TSC</span>
+              <span className="text-xl font-semibold text-stone-400">TSC</span>
             </div>
           </div>
 
@@ -26,7 +26,7 @@ export default function Navigation() {
               <Link href="/connect" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Connect
               </Link>
-              <Link href="/about" className="text-blue-600 hover:text-blue-700 px-3 py-2 text-sm font-medium">
+              <Link href="/about" className="text-stone-600 hover:text-stone-700 px-3 py-2 text-sm font-medium">
                 Who we are
               </Link>
             </div>
@@ -34,7 +34,7 @@ export default function Navigation() {
 
           {/* Right side - Cart and CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+            <button className="bg-[#d4b8a6] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#d4b8a6] transition-colors">
               Schedule Appointment
             </button>
           </div>

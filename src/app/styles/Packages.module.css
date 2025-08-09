@@ -1,0 +1,144 @@
+/* Packages Section Styles */
+.packagesSection {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.packagesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.packagesTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.titleHighlight {
+  color: rgb(249, 167, 140);
+}
+
+.packagesCaption {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.packageCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  text-align: center;
+  align-items: center;
+}
+
+.packageCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.packageIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  border: 2px dotted #d2b48c;
+  padding: 0.2rem;
+  order: -1;
+}
+
+.iconImage {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.packageContent {
+  flex: 1;
+}
+
+.packageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: rgb(243, 152, 125);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.packageSubtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgb(77, 74, 74);
+  line-height: 1;
+}
+
+.packageDescription {
+  color: #6b7280;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 992px) {
+  .packageCard {
+    flex-direction: row;
+    text-align: left;
+    align-items: stretch;
+    padding-right: 100px;
+    position: relative;
+  }
+
+  .packageIcon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    margin-bottom: 0;
+    order: 0;
+  }
+
+  .packageContent {
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .packagesTitle {
+    font-size: 2rem;
+  }
+
+  .packagesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .packageCard {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,87 @@
+/* More About Section Styles */
+.moreAboutVhWrap {
+  height: 100vh;
+  position: relative;
+}
+
+.moreAboutStickyWrap {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.moreAboutContantWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.moreAboutContant {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  max-width: 600px;
+}
+
+.moreAboutImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.moreAboutImageWrap {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.moreAboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 991px) {
+  .moreAboutVhWrap {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .moreAboutStickyWrap {
+    position: static;
+    height: auto;
+  }
+  
+  .moreAboutContantWrap {
+    flex-direction: column;
+    padding: 4rem 1rem;
+  }
+  
+  .moreAboutImageWrapper {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .moreAboutImageWrap {
+    position: static;
+    width: 110px;
+    height: 110px;
+    transform: none !important;
+  }
+}

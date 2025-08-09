@@ -1,5 +1,6 @@
 'use client';
 
+import styles from '../styles/MoreAbout.module.css';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
@@ -112,26 +113,26 @@ export default function MoreAbout() {
   const imageClasses = ['first', 'second', 'third', 'fourth', 'fifth'];
 
   return (
-    <section className="more-about-vh-wrap">
-      <div className="more-about-sticky-wrap">
-        <div ref={containerRef} className="more-about-contant-wrap">
+    <section className={styles.moreAboutVhWrap}>
+      <div className={styles.moreAboutStickyWrap}>
+        <div ref={containerRef} className={styles.moreAboutContantWrap}>
           {/* Text Content (Renders on top) */}
-          <div ref={textRef} className="more-about-contant">
+          <div ref={textRef} className={styles.moreAboutContant}>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
               Complimentary 30 minute initial consultation provided at no cost.
             </h2>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors">
-              More About Us
+            <button className="bg-[#d2b48c] hover:bg-[#c5a682] text-white px-8 py-4 rounded-full text-lg font-medium transition-colors">
+              Learn More
             </button>
           </div>
 
           {/* Image Wrapper (Renders behind text on desktop) */}
-          <div className="more-about-image-wrapper">
+          <div className={styles.moreAboutImageWrapper}>
             {images.map((src, index) => (
               <div
                 key={src}
                 ref={(el) => { imageRefs.current[index] = el; }}
-                className={`more-about-image-wrap ${imageClasses[index]}`}
+                className={`${styles.moreAboutImageWrap} ${styles[imageClasses[index]]}`}
                 // On mobile, this inline style resets any leftover GSAP styles
                 style={isMobile ? { position: 'relative', opacity: 1, transform: 'none' } : {}}
               >
@@ -139,7 +140,7 @@ export default function MoreAbout() {
                   src={src}
                   alt={`Community image ${index + 1}`}
                   fill
-                  className="more-about-image"
+                  className={styles.moreAboutImage}
                   sizes="(max-width: 991px) 110px, 144px"
                   priority={index < 3}
                 />

@@ -1,0 +1,132 @@
+/* Services Section Styles */
+.services {
+  padding: 0;
+  background-color: #faf8f5;
+  box-sizing: content-box;
+}
+
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: none;
+  margin: 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  max-width: none;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: content-box;
+}
+
+.servicesContent {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #faf8f5;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.sectionTitleColor {
+  color: rgba(214, 158, 139);
+}
+
+.sectionDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.servicesFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.featureIcon {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(214, 158, 139);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.featureContent h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.featureContent p {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.servicesImage {
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 991px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .servicesContent {
+    padding: 3rem 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .servicesContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionDescription {
+    font-size: 1rem;
+  }
+}
